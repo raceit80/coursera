@@ -20,10 +20,18 @@ class LineAnalyzer
   end
 
   def calculate_word_frequency
-    arr_words = @content.chomp.split 
-    puts arr_words
+    
+    @highest_wf_count= Hash.new(0)
+    @content.split.each do |word|
+    @highest_wf_count[word.downcase] += 1
+    end
+    puts @highest_wf_count
+    @highest_wf_words = 2
+    
 
-    arr_words.each  { |word| }
+    @highest_wf_words = @highest_wf_count.max_by{|k,v| v}
+    puts @highest_wf_words
+   
   end
 
 
@@ -41,7 +49,7 @@ class LineAnalyzer
 end
 
 
-analyze1 = LineAnalyzer.new("tiger tiger lion hello is", 1)
+analyze1 = LineAnalyzer.new("tiger tiger lion hello lion lion bear tiger bear lion bear lion is", 1)
 
 #  Implement a class called Solution. 
 class Solution
