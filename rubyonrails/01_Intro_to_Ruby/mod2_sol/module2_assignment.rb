@@ -16,10 +16,14 @@ class LineAnalyzer
   def initialize(content, line_number)
     @content = content
     @line_number = line_number
+    calculate_word_frequency
   end
 
   def calculate_word_frequency
-    
+    arr_words = @content.chomp.split 
+    puts arr_words
+
+    arr_words.each  { |word| }
   end
 
 
@@ -35,6 +39,9 @@ class LineAnalyzer
   #* identify the words that were used the maximum number of times and
   #  store that in the highest_wf_words attribute.
 end
+
+
+analyze1 = LineAnalyzer.new("tiger tiger lion hello is", 1)
 
 #  Implement a class called Solution. 
 class Solution
