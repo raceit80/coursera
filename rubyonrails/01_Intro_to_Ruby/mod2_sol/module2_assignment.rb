@@ -12,12 +12,15 @@ class LineAnalyzer
   #Add the following methods in the LineAnalyzer class.
   #* initialize() - taking a line of text (content) and a line number
   #* calculate_word_frequency() - calculates result
+  @@count_instances=0
 
   def initialize(content, line_number)
     @content = content
     @line_number = line_number
-
+    @@count_instances+=1
   end
+
+ 
 
   def calculate_word_frequency
     
@@ -29,11 +32,13 @@ class LineAnalyzer
 
     #puts @highest_wf_count
     #puts "_______"
-    #puts @highest_wf_words
+    puts @highest_wf_words
 
   end
 
-
+  def self.count
+    @@count_instances
+  end
 
   #Implement the initialize() method to:
   #* take in a line of text and line number
@@ -58,7 +63,7 @@ class Solution
   #* highest_count_across_lines - a number with the maximum value for highest_wf_words attribute in the analyzers array.
   #* highest_count_words_across_lines - a filtered array of LineAnalyzer objects with the highest_wf_words attribute 
   #  equal to the highest_count_across_lines determined previously.
-  attr_reader :analyzers, :highest_count_across_lines, :highest_count_words_across_lines
+  attr_reader :analyzers, :highest_count_across_lines, :highest_count_words_across_lines, :count
 
 
   # Implement the following methods in the Solution class.
@@ -70,17 +75,37 @@ class Solution
 
   def analyze_file
       local_var1=1
+      @analyzers = Hash.new(0)
       File.foreach('test.txt') do |line|
-        @analyzers = LineAnalyzer.new(line.split, local_var1)
+        @analyzers[local_var1] = LineAnalyzer.new(line.split, local_var1)
         local_var1+=1
+        puts local_var1
+      
+
       end
+        puts @analyzers[local_var1].calculate_word_frequency
   end
+
+ 
+  @count = LineAnalyzer.count
+  puts @count
 
   def calculate_line_with_highest_frequency
-    @highest_count_words_across_lines = Hash.new(0)
+    #@highest_count_words_across_lines = @analyzers.calculate_word_frequency
+    #puts @highest_count_across_lines
+    #local_lineanalyzer_instance_count = LineAnalyzer.count_instances
+    #puts local_lineanalyzer_instance_count
+    puts @count
+    #@highest_count_words_across_lines[@count] = @analyzers[@count].calculate_word_frequency
+    #@count -=1
+    puts "dfasf"
+    #puts @analyzers.calculate_word_frequency
+    puts "dfasf"
+    
+
   end
 
-
+  
   
   # Implement the analyze_file() method() to:
   #* Read the 'test.txt' file in lines 
@@ -99,6 +124,7 @@ end
 
 
 analyze1 = LineAnalyzer.new("tiger tiger lion hello lion lion bear tiger bear lion bear lion is", 1)
-
+analyze1.calculate_word_frequency
 solution1 = Solution.new
 solution1.analyze_file
+solution1.calculate_line_with_highest_frequency
