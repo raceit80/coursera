@@ -89,7 +89,7 @@ class Solution
   def print_highest_word_frequency_across_lines
    
     @highest_count_words_across_lines.each do |la_hw_obj|
-      p "The following words appear the most at line #{la_hw_obj.line_number} :"
+      p "The following words appear the most (#{@highest_count_across_lines} times) at line #{la_hw_obj.line_number} :"
       puts la_hw_obj.highest_wf_words
       puts "____________________________________________________________________"
     end
