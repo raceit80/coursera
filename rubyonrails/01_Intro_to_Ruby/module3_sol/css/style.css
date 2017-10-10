@@ -1,0 +1,104 @@
+body {
+	font-family: 'Asap Condensed', sans-serif;
+
+}
+
+* {
+	box-sizing: border-box;
+
+}
+
+
+
+
+
+#header-nav {
+	
+	border-radius: 0;
+	border: 2px solid black;
+	background-color: #ef704c;
+}
+
+.navbar-default .navbar-brand {
+	padding-top: 15px;
+	font-weight: bold;
+	color: black;
+	margin-top: 0px
+	margin-bottom: 0px;
+	font-size: 2em;
+}
+
+
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+	
+}
+
+#nav-list {
+	margin-top: 60px;
+	
+}
+
+#nav-list a {
+	color:black;
+	text-align: center;
+	font-size: 1.5em;
+	background-color: #f29b82;
+	border: 1px solid #ef947a;
+}
+
+
+#nav-list a:hover {
+	background: white;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 2px solid white;
+}
+
+.menu_items {
+	border: 1px solid black;
+	padding: 10px;
+	margin: 10px;
+	
+}
+
+#chicken {
+	background-color: #d4f7e3;
+}
+
+#beef {
+	background-color: #efaa9e;
+}
+
+#sushi {
+	background-color: #a3f7f3;
+}
+
+
+div > h3 {
+	text-align: center;	
+}
+
+
+
+
+@media (min-width:992px){
+
+
+
+}
+
+
+
+@media (min-width:768px) and (max-width: 991px) {
+	
+
+}
+
+@media (max-width:767px){
+
+
+
+} 
