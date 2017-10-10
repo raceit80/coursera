@@ -53,13 +53,20 @@ class Solution
   #* highest_count_across_lines - a number with the maximum value for highest_wf_words attribute in the analyzers array.
   #* highest_count_words_across_lines - a filtered array of LineAnalyzer objects with the highest_wf_words attribute 
   #  equal to the highest_count_across_lines determined previously.
+<<<<<<< HEAD:rubyonrails/01_Intro_to_Ruby/module02/assignment-Calc-Max-Word-Freq/module2_assignment.rb
   attr_reader :highest_count_across_lines, :highest_count_words_across_lines, :analyzers
+=======
+
+  attr_reader :analyzers, :highest_count_across_lines, :highest_count_words_across_lines
+
+>>>>>>> dabbdc5c549263e7e5afc3b13e4d2726e081d7a5:rubyonrails/01_Intro_to_Ruby/mod2_sol/module2_assignment.rb
   # Implement the following methods in the Solution class.
   #* analyze_file() - processes 'test.txt' intro an array of LineAnalyzers and stores them in analyzers.
   #* calculate_line_with_highest_frequency() - determines the highest_count_across_lines and 
   #  highest_count_words_across_lines attribute values
   #* print_highest_word_frequency_across_lines() - prints the values of LineAnalyzer objects in 
   #  highest_count_words_across_lines in the specified format
+<<<<<<< HEAD:rubyonrails/01_Intro_to_Ruby/module02/assignment-Calc-Max-Word-Freq/module2_assignment.rb
   def initialize
     @analyzers = []
   end
@@ -98,6 +105,16 @@ class Solution
 
 
 end
+=======
+
+  def analyze_file
+    @analyzers = LineAnalyzer.new (File.foreach ('text.txt') do |line| line.split, line )
+      
+
+  end
+
+  
+>>>>>>> dabbdc5c549263e7e5afc3b13e4d2726e081d7a5:rubyonrails/01_Intro_to_Ruby/mod2_sol/module2_assignment.rb
   # Implement the analyze_file() method() to:
   #* Read the 'test.txt' file in lines 
   #* Create an array of LineAnalyzers for each line in the file
