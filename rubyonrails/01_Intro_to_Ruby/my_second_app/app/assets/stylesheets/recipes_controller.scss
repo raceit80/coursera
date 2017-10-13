@@ -1,3 +1,24 @@
 // Place all the styles related to the RecipesController controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+font-family: 'PT Sans Narrow', sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding: 12px;
+}
+
+.even {
+	background-color: #f9f9f7;
+}
+
+th {
+	background-color: #d3d3c6;
+	font-size: 1.5em;
+}

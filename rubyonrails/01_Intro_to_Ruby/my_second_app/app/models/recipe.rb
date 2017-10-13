@@ -3,9 +3,11 @@ require 'pp'
 
 class Recipe
 	include HTTParty
+	@key_value = ENV['FOOD2FORK_KEY'] || '7326dfc69272a062e170ec938206dcfb'
+    #@hostport = ENV['FOOD2FORK_SERVER_AND_PORT'] || 'www.food2fork.com' 
 	
-	base_uri 'http://food2fork.com/api/search'
-	default_params key: ENV['FOOD2FORK_KEY']	
+	base_uri "http://food2fork.com/api/search"
+	default_params key: @key_value
 	format :json
 
 	#def initialize(term)
