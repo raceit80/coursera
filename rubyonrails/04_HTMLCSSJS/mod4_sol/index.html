@@ -2,13 +2,28 @@
 <html>
 	<head lang="en">
 		<meta charset ="utf-8">
-		<script src="script.js"></script>
+		
+		<script>
+			var names = ["Ronald", "Joe", "Greg", "Sandy", "Jack", "Jason", "Heidi"];
+			var res = "";
+			for(var i=0; i < names.length; i++) {
+				res = names[i].slice(0, 1);
+	
+				if (res == 'J'|| res == 'j' ) {
+					console.log ("GoodBye " + names[i]);
+				}
+				else {
+					console.log ("Hello " + names[i]);
+				}
+			}
+		</script>
+
 		<title> Module 4 Solution </title>
 	</head>
 
 	<body>
 		
-		<p> JavaScript Solution </p>
+		<p> JavaScript Solution - Included the solution within the inline script! </p>
 
 	</body>
 
