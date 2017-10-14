@@ -1,0 +1,26 @@
+
+
+<h1>Searching for Recipes: <%= @term %></h1>
+
+
+<table border="1">
+	<tr>
+		<th>Image</th>
+		<th>Title</th>
+		<th>Social Rank</th>
+	</tr>
+
+	<% @new_recipes_hash.each do |h| %>
+	<tr class= <%= cycle('odd', 'even') %>>
+		<td> <a href=<%= h["source_url"]%>><%= image_tag(h["image_url"], :size => "100x100") %></a></td>
+		<td><a href=<%= h["source_url"]%>><%= h["title"] %></a></td>
+		<td><%= h["social_rank"] %></td>
+	</tr>
+	<% end %>
+</table>
+
+		
+		
+
+
+
