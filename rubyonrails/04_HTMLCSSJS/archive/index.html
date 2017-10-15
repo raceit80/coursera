@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head lang="en">
+		<meta charset ="utf-8">
+		
+		<script>
+			var names = ["Ronald", "Joe", "Greg", "Sandy", "Jack", "Jason", "Heidi"];
+			var res = "";
+			for(var i=0; i < names.length; i++) {
+				res = names[i].slice(0, 1);
+	
+				if (res == 'J'|| res == 'j' ) {
+					console.log ("GoodBye " + names[i]);
+				}
+				else {
+					console.log ("Hello " + names[i]);
+				}
+			}
+		</script>
+
+		<title> Module 4 Solution </title>
+	</head>
+
+	<body>
+		
+		<h1> JavaScript Solution</h1>
+		<p> Instructions: Open the "Inspect" Developer tools and go to console and check for solution! </p>
+		<p> Array with names will output Goodbye with names starting by j or J and other names with Hello name </p>
+
+	</body>
+
+
+</html>
